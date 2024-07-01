@@ -1,0 +1,41 @@
+<!-- Page 1 : étoile -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Avis</title>
+  <style>
+   .rating {
+      font-size: 24px;
+      cursor: pointer;
+    }
+   .rating:hover {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <h1>Laissez votre avis</h1>
+  <div class="rating">
+    <span class="star" id="star-1">&#x2605;</span>
+    <span class="star" id="star-2">&#x2605;</span>
+    <span class="star" id="star-3">&#x2605;</span>
+    <span class="star" id="star-4">&#x2605;</span>
+    <span class="star" id="star-5">&#x2605;</span>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll('.star');
+    stars.forEach((star, index) => {
+      star.addEventListener('click', () => {
+        const rating = index + 1;
+        if (rating === 5) {
+          window.location.href = 'https://g.page/r/CbKGZdqc8oeZEAI/review'; // URL pour les 5 étoiles
+        } else {
+          window.location.href = 'Feuille02_HTML.html'; // URL pour les autres étoiles
+        }
+        console.log(rating);
+      });
+    });
+  </script>
+</body>
+</html>
